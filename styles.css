@@ -112,7 +112,7 @@ nav {
 #about-me {
     display: flex;
     flex-direction: column;
-    background-image: url("/assets/b52daa42857c78c790827194d21b5c43.gif");
+    background-image: url("assets/b52daa42857c78c790827194d21b5c43.gif");
     background-size:100% 100%; 
   background-repeat: no-repeat;
   height: 100vh;
@@ -260,7 +260,7 @@ nav {
 }
 .projects_container {
     padding: 50px 0px;
-    background-image: url("/assets/download.gif");
+    background-image: url("assets/download.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
