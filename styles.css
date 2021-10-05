@@ -419,6 +419,7 @@ footer {
   
     .project_container {
       border-radius: 0;
+      margin-left: 44px;
     }
   
     .project_description {
