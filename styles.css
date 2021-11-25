@@ -116,7 +116,7 @@ nav {
 #about-me {
     display: flex;
     flex-direction: column;
-    background-image: url("assets/2435550.png");
+    background-image: url("assets/2435550-min.png");
     background-size:100% 100%; 
   background-repeat: no-repeat;
   height: 100vh;
