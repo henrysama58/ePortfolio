@@ -7,6 +7,91 @@
     font-family: 'Roboto', sans-serif;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+  
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242424;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+
 #emp {
     color: rgb(41, 104, 175);
     font-weight: 700;
@@ -58,7 +143,6 @@ label {
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
-    animation: fade-up 650ms 400ms backwards;
 }
 
 .container {
@@ -202,20 +286,6 @@ li {
     min-height: 100vh;
 }
 
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 .header {
     position: absolute;
     top: 50%;
@@ -231,7 +301,6 @@ li {
     line-height: 2;
     max-width: 450px;
     text-align: center;
-    animation: fade-up 750ms 500ms backwards;
 }
 
 .header-content {
@@ -259,7 +328,6 @@ li {
     margin-top: 16px;
     display: flex;
     align-items: center;
-    animation: fade-up 850ms 600ms backwards;
 }
 
 .about-me-link {
@@ -322,16 +390,6 @@ li {
     height: 6px;
     border-radius: 2px;
     animation: scroll 1000ms infinite alternate-reverse;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateY(3px);
-    }
-
-    100% {
-        transform: translateY(-3px);
-    }
 }
 
 /* PROJECTS */
@@ -613,16 +671,6 @@ footer {
     animation: loading 1000ms infinite;
 }
 
-@keyframes loading {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .modal-exit {
     position: absolute;
     top: 30px;
@@ -654,17 +702,6 @@ footer {
 
 .shape {
     position: relative;
-    animation: fade-in 4200ms backwards;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .shape-0 { 

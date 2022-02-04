@@ -7,6 +7,7 @@
     <title>Henry Le</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -14,6 +15,11 @@
 (function() {
 emailjs.init("user_DRxJ18uk3xgkYakVhvZLw");
 })();
+</script>
+<script>
+    $(window).on("load", function() {
+          $(".loader-wrapper").fadeOut("slow");
+        });
 </script>
 </head>
 <body>
@@ -168,7 +174,6 @@ emailjs.init("user_DRxJ18uk3xgkYakVhvZLw");
         <img src="assets/circle.svg" class="shape shape-8" >
         
     </section>
-
     <section id="projects">
         <div class="container">
             <div class="row">
@@ -250,5 +255,8 @@ emailjs.init("user_DRxJ18uk3xgkYakVhvZLw");
             </div>
         </div>
     </footer>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 </body>
 </html>
