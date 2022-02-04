@@ -744,4 +744,8 @@ footer {
     .modal-half {
         padding: 40px;
     }
+
+    .shape-1, .shape-2, .shape-3, .shape-6 {
+        display: none;
+    }
 }
