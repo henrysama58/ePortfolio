@@ -1,245 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry Le | Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <title>Henry Le</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_DRxJ18uk3xgkYakVhvZLw");
+})();
+</script>
 </head>
-
 <body>
-    <section id="about-me">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
-            <div class="personal_logo">
-                Henry Le 🎮
-            </div>
-            <ul class="nav_link-list">
-                <li class="nav_link">
-                    <a href="#skills" class="
-                        nav_link-anchor
-                        link_hover-effect
-                        link_hover-effect-black
-                        ">Skills</a>
+            <figure>
+                <img id="personal-logo" src="assets/29817976286ebda32731a9489aacdef9.png" alt="">
+            </figure>
+            <ul class="nav-link-list">
+                <li onclick="toggleModal()" class="nav-link">
+                    <a class="nav-link-anchor link-hover-effect link-hover-effect-black" href="#">About</a>
                 </li>
-                <li class="nav_link">
-                    <a href="#projects" class="
-                        nav_link-anchor
-                        link_hover-effect
-                        link_hover-effect-black
-                        ">Quests</a>
+                <li class="nav-link">
+                    <a class="nav-link-anchor link-hover-effect link-hover-effect-black" href="#projects">Projects</a>
                 </li>
-                <li class="nav_link">
-                    <a href="mailto:henrysama58@gmail.com" class="
-                        nav_link-anchor
-                        nav_link-anchor-primary
-                        ">Contact</a>
+                <li onclick="toggleModal()" class="nav-link">
+                    <a class="nav-link-anchor link-hover-effect link-hover-effect-black" href="#">Contact</a>
+                </li><li onclick="toggleContrast()" class="nav-link">
+                    <a class="nav-link-anchor link-hover-effect link-hover-effect-black" href="#">
+                        <i class="fas fa-adjust"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
-
-        <div class="flex flex-1">
-            <div class="about-me_info row">
-                <div class="about-me_info_container nes-container with-title">
-                    <span class="title">Player LVL. 20</span>
-                    <figure class="about-me_picture-mask">
-                        <img src="assets/profile-picture1.jpg" alt="Profile Picture" class="about-me_picture">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title"><span id="emp">I'm Henry.</span></h1>
+                <p class="header-paragraph">
+                    I'm an experienced and highly motivated <span id="emp">Frontend Software Engineer</span> with a strong passion for learning and building websites that provide a great user experience. 
+                    <br>
+                    Here's a bit more <span class="cursor" onclick="toggleModal()" id="emp">about me.</span>
+                </p>
+                <div class="about-me-links">
+                    <a href="https://www.linkedin.com/in/henry-le-884233208/" class="about-me-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/henrysama58" class="about-me-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="assets/HENRY LE RESUME.pdf"
+                        class="about-me-link" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button onclick="toggleModal()" class="mail-button">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll-icon"></div>
+        </a>
+        <div class="modal">
+            <div class="modal-half modal-about">
+                <h3 class="modal-about-title">
+                    Here's a bit about me.
+                </h3>
+                <h4 class="modal-about-subtitle">
+                    Frontend Software Engineer
+                </h4>
+                <p class="modal-para">
+                    I'm a 21 year old <span id="emp">frontend software engineer</span> with a strong passion for learning and building websites that provide a great <span id="emp">user experience.
+                    </span>
+                    <br>
+                    I am always looking for new ways to <span id="emp">solve problems</span>, and hope to learn from the best as I pursue my <span id="emp">engineering dreams,</span> and help companies grow.
+                </p>
+                <div class="skill-list">
+                    <figure class="skill">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                                alt="HTML Logo" class="skill-img">
+                                <span class="language">HTML</span>
                     </figure>
-                    <h1 class="about-me_info_title">
-                        Hey! I'm <span class="text-color">Henry Le</span>.
-                    </h1>
-                    <p class="about-me_info_bio">
-                        I'm an aspiring <strong class="text-color">frontend software engineer</strong>!
-                    </p>
-                    <div class="about-me_links">
-                        <a href="https://www.linkedin.com/in/henry-le-884233208/" class="about-me_link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/henrysama58" class="about-me_link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://docs.google.com/document/d/1kzkCKnY_dT0W3ZyWNZCSIKu8yZuxlgf2/edit?usp=sharing&ouid=109325866092830609220&rtpof=true&sd=true"
-                            class="about-me_link" target="_blank">
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
+                    <figure class="skill">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
+                                class="skill-img">
+                                <span class="language">CSS</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                                alt="JavaScript Logo" class="skill-img">
+                                <span class="language">JavaScript</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
+                                class="skill-img">
+                                <span class="language">ReactJS</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://img.icons8.com/color/480/000000/java-coffee-cup-logo--v1.png"
+                                alt="Java Logo" class="skill-img">
+                                <span class="language">Java</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://img.icons8.com/color/480/000000/python--v1.png" alt="Python logo"
+                        class="skill-img">
+                        <span class="language">Python</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://img.icons8.com/color/480/000000/google-logo.png" alt="Google Logo"
+                                class="skill-img">
+                                <span class="language">Googling</span>
+                    </figure>
+                    <figure class="skill">
+                        <img src="https://img.icons8.com/color/480/000000/stackoverflow.png"
+                                alt="StackOverflow Logo" class="skill-img">
+                                <span class="language">The Bible</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal-half modal-contact">
+                <i onclick="toggleModal()" class="fas fa-times modal-exit"></i>
+                <h3 class="modal-contact-title">
+                    Let's have a chat!
+                </h3>
+                <h3 class="modal-contact-subtitle">
+                    I'm currently open to new opportunities.
+                </h3>
+                <form onsubmit="contact(event)" id="contact-form">
+                    <div class="form-item">
+                        <label class="form-item-label">Name</label>
+                        <input type="text" class="input" name="user_name" type="text" required></input>
                     </div>
+                    <div class="form-item">
+                        <label class="form-item-label">Email</label>
+                        <input type="text" class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item-label">Message</label>
+                        <textarea type="text" class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact-submit" class="form-submit">Send it my way!</button>
+                </form>
+                <div class="modal-overlay modal-overlay-loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal-overlay modal-overlay-success">
+                    Thanks for the message! Looking forward to speaking with you soon.
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="skills">
-        <div class="skills_container ">
-            <div class="row">
-                <h1 class="section_title nes-container">Skills 🕹️</h1>
-                <div class="skill_list">
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-                                alt="HTML Logo" class="skill_img">
-                        </figure>
-                        <span class="skill_name">HTML</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
-                                class="skill_img">
-                        </figure>
-                        <span class="skill_name">CSS</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
-                                alt="JavaScript Logo" class="skill_img">
-                        </figure>
-                        <span class="skill_name">JavaScript</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
-                                class="skill_img">
-                        </figure>
-                        <span class="skill_name">ReactJS</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://img.icons8.com/color/480/000000/java-coffee-cup-logo--v1.png"
-                                alt="Java Logo" class="skill_img">
-                        </figure>
-                        <span class="skill_name">Java</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://img.icons8.com/color/480/000000/python--v1.png" alt="Python logo"
-                                class="skill_img">
-                        </figure>
-                        <span class="skill_name">Python</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://img.icons8.com/color/480/000000/google-logo.png" alt="Google Logo"
-                                class="skill_img">
-                        </figure>
-                        <span class="skill_name">Googling</span>
-                    </div>
-                    <div class="skill">
-                        <figure class="skill_img-container">
-                            <img src="https://img.icons8.com/color/480/000000/stackoverflow.png"
-                                alt="StackOverflow Logo" class="skill_img">
-                        </figure>
-                        <span class="skill_name">Stack Overflow</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img src="assets/circle.svg" class="shape shape-0" >
+        <img src="assets/semi circle.svg" class="shape shape-1" >
+        <img src="assets/squiggly.svg" class="shape shape-2" >
+        <img src="assets/triangle.svg" class="shape shape-3" >
+        <img src="assets/circle.svg" class="shape shape-4" >
+        <img src="assets/semi circle.svg" class="shape shape-5" >
+        <img src="assets/squiggly.svg" class="shape shape-6" >
+        <img src="assets/triangle.svg" class="shape shape-7" >
+        <img src="assets/circle.svg" class="shape shape-8" >
+        
     </section>
 
     <section id="projects">
-        <div class="projects_container">
+        <div class="container">
             <div class="row">
-                <h1 class="projects_title nes-container">Quests 📜</h1>
-                <ul class="project_list">
+                <h1 class="section-title">
+                    Here are some of my <span id="emp">projects</span>
+                </h1>
+                <ul class="project-list">
                     <li class="project">
-                        <div class="project_container">
-                            <img class="project_img" src="assets/jr_rugs-min.png" alt="JR_RUGS">
-                            <div class="project_description">
-                                <h3 class="project_description-title">JR_RUGS</h3>
-                                <h4 class="project_description-subtitle">
-                                    HTML5, CSS3, JS
-                                </h4>
-                                <p class="project_description-para">
-                                    JR_RUGS is a landing page designed to showcase the services this business offers. I was the sole front-end developer for this product.
-                                </p>
-                                <div class="project_description-links">
-                                    <a href="https://github.com/henrysama58/jr_rugs" class="project_description-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://jr-rugs.com/" class="project_description-link" target="_blank">
-                                        <i class="fas fa-link"></i>
-                                    </a>
+                        <div class="project-wrapper">
+                            <img class="project-img" src="assets/jr_rugs-min.png" alt="">
+                            <div class="project-bg">
+                                <div class="project-description">
+                                    <h3 class="project-description-title">
+                                        JR RUGS
+                                    </h3>
+                                    <h4 class="project-description-subtitle">
+                                        HTML, CSS, JavaScript
+                                    </h4>
+                                    <p class="project-description-para">
+                                        JR_RUGS is a landing page designed to showcase the services this business offers. I was the sole front-end developer for this product.
+                                    </p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/henrysama58/jr_rugs" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://jr-rugs.com/" class="project-link" target="_blank">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project_container">
-                            <img class="project_img" src="assets/library-min.png" alt="Library Store">
-                            <div class="project_description">
-                                <h3 class="project_description-title">Library</h3>
-                                <h4 class="project_description-subtitle">
-                                    HTML5, CSS3, JS
-                                </h4>
-                                <p class="project_description-para">
-                                    Library is a platform allowing users to view and buy books online. I was the sole front-end developer for this product.
-                                </p>
-                                <div class="project_description-links">
-                                    <a href="https://github.com/henrysama58/libraryapp" class="project_description-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://henrysama58.github.io/libraryapp/" class="project_description-link" target="_blank">
-                                        <i class="fas fa-link"></i>
-                                    </a>
+                        <div class="project-wrapper">
+                            <img class="project-img" src="assets/library-min.png" alt="">
+                            <div class="project-bg">
+                                <div class="project-description">
+                                    <h3 class="project-description-title">
+                                        Library
+                                    </h3>
+                                    <h4 class="project-description-subtitle">
+                                        HTML, CSS, JavaScript
+                                    </h4>
+                                    <p class="project-description-para">
+                                        Library is a platform allowing users to view and buy books online. I was the sole front-end developer for this product.
+                                    </p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/henrysama58/libraryapp" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://henrysama58.github.io/libraryapp/" class="project-link" target="_blank">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <!-- FOR FUTURE PROJECTS
-                    <li class="project">
-                        <div class="project_container">
-                            <img class="project_img" src="/assets/googleClone.png" alt="Google Clone Project">
-                            <div class="project_description">
-                                <h3 class="project_description-title">Google Clone</h3>
-                                <h4 class="project_description-subtitle">
-                                    HTML, CSS3
-                                </h4>
-                                <p class="project_description-para">
-                                    This is the Front End Clone of the Google Search Homepage. It was made as a part of my personal project while I was learning Web Development. I learned to understand real-life applications of style choices in popular websites. I can inspect elements in the page and try to understand the methods used for the box-model, positioning, and display.
-                                </p>
-                                <div class="project_description-links">
-                                    <a href="https://github.com/henrysama58" class="project_description-link" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="project_description-link" target="_blank">
-                                        <i class="fas fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                -->
                 </ul>
             </div>
         </div>
     </section>
-
     <footer>
-        <div class="row footer_row">
-            <a href="#">
+        <div class="container">
+            <div class="row footer-row">
                 <figure>
-                    <img src="" alt="">
+                    <img class="footer-logo-img" src="assets/29817976286ebda32731a9489aacdef9.png" alt="">
                 </figure>
-            </a>
-            <div class="footer_social-list">
-                <a href="https://github.com/henrysama58" class="
-                    footer_social-link
-                    link_hover-effect
-                    link_hover-effect-white
-                    " target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/henry-le-884233208/" class="
-                    footer_social-link
-                    link_hover-effect
-                    link_hover-effect-white
-                    " target="_blank">LinkedIn</a>
-                <a href="https://docs.google.com/document/d/1kzkCKnY_dT0W3ZyWNZCSIKu8yZuxlgf2/edit?usp=sharing&ouid=109325866092830609220&rtpof=true&sd=true" class="
-                    footer_social-link
-                    link_hover-effect
-                    link_hover-effect-white
-                    " target="_blank">Resume</a>
+                <div class="footer-links">
+                    <a href="https://github.com/henrysama58" class="footer-link link-hover-effect link-hover-effect-white" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/henry-le-884233208/" class="footer-link link-hover-effect link-hover-effect-white" target="_blank">LinkedIn</a>
+                    <a href="#" class="footer-link link-hover-effect link-hover-effect-white" onclick="toggleModal()">Contact</a>
+                    <a class="footer-link link-hover-effect link-hover-effect-white" href="assets/HENRY LE RESUME.pdf" target="_blank">Resume</a>
+                </div>
+                <div class="footer-copyright">
+                    Made by Henry Le
+                </div>
             </div>
-            <div class="footer_copyright">Copyright &copy; 2021 Henry Le</div>
         </div>
     </footer>
 </body>
