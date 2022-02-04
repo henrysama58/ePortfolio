@@ -58,6 +58,7 @@ label {
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .container {
@@ -201,6 +202,20 @@ li {
     min-height: 100vh;
 }
 
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .header {
     position: absolute;
     top: 50%;
@@ -215,6 +230,8 @@ li {
     font-size: 24px;
     line-height: 2;
     max-width: 450px;
+    text-align: center;
+    animation: fade-up 750ms 500ms backwards;
 }
 
 .header-content {
@@ -242,6 +259,7 @@ li {
     margin-top: 16px;
     display: flex;
     align-items: center;
+    animation: fade-up 850ms 600ms backwards;
 }
 
 .about-me-link {
@@ -636,6 +654,17 @@ footer {
 
 .shape {
     position: relative;
+    animation: fade-in 4200ms backwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .shape-0 { 
@@ -699,7 +728,7 @@ footer {
         left: 0;
         height: auto;
         transform: none;
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
         border-radius: 0;
     }
