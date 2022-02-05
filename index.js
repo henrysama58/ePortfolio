@@ -5,6 +5,16 @@ const scaleFactor = 1 / 20;
 let pageLoaded = false;
 let timeElapsed = false;
 
+loadPage();
+ 
+function loadPage() {
+    $(window).on("load", function() {
+        setTimeout(() => {
+            $(".loader-wrapper").fadeOut("slow");
+        }, 2000)
+      });
+}
+
 function moveBackground(event) {
     const shapes = document.querySelectorAll(".shape");
     const x = event.clientX * scaleFactor;
