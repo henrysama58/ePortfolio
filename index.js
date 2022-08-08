@@ -6,11 +6,7 @@ let pageLoaded = false;
 let timeElapsed = false;
 
 loadPage();
-alert();
 
-function alert() {
-  alert('Hi! Welcome to my page! I am currently running Adobe Target tests so if you see some wonky stuff try not to pay too much attention to it. Thanks!')
-}
 
 function loadPage() {
     $(window).on("load", function() {
@@ -18,6 +14,8 @@ function loadPage() {
             $(".loader-wrapper").fadeOut("slow");
         }, 2000)
       });
+  
+  alert('Hi! Welcome to my page! I am currently running Adobe Target tests so if you see some wonky stuff try not to pay too much attention to it. Thanks!');
 }
 
 function moveBackground(event) {
